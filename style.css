@@ -56,6 +56,11 @@ Text Color: Orange */
 /* Automatic City Button Hover: */
 
 /* .container-weather: */
+section #current-city{
+    border: 30px;
+    border-color: black;
+    border-radius: 30%;
+}
 
 /* 5-Day Forecast: */
 
