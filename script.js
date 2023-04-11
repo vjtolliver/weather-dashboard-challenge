@@ -71,18 +71,31 @@ var submitBtn = document.querySelector('.submit');
         var cwWnd = document.querySelector('.wind-speed');
         cwWnd.innerText = "Wind Speed: " + wndSpd;
 
+        var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=dcb4a51f4037e4402071e03b0811d2ca"
+    
+        $.ajax({
+            url: fiveDayUrl,
+            method: "GET"
+        }).then(function(responseF){
+            
+            console.log(responseF);
+        
+        //var cityNameF = responseF.city.name;
+        var tempDegF = responseF.list[1].main.temp;
+        var iconWthrF = responseF.list[9].weather.icon;
+        var humidAmntF = responseF.list[17].main.humidity;
+        var wndSpdF = responseF.list[25].wind.speed;
+
+        //console.log(cityNameF);
+        console.log(tempDegF);
+        console.log(iconWthrF);
+        console.log(humidAmntF);
+        console.log(wndSpdF);
+        })
     });
    
     });
 });
   });
 
-    //     var currentUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=dcb4a51f4037e4402071e03b0811d2ca";
-      
-    //     $.ajax({
-    //         url: currentUrl,
-    //         method: "GET"
-    //     }).then(function(response) {
-    //         console
-    //     }
-    // })
+  
