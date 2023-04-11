@@ -1,6 +1,6 @@
-* {
+/* * {
 color: whitesmoke;
-}
+} */
 /* Header:
 Background Color: Linear Gradient Yellow to Orange
 White Text 
@@ -28,6 +28,7 @@ text-align: center;
 form h2{
     margin-top: 10px;
     margin-left: 50px;
+    color: whitesmoke;
 }
 /* Input Box: */
 .input-group {
@@ -56,24 +57,41 @@ Text Color: Orange */
 /* Automatic City Button Hover: */
 
 /* .container-weather: */
-#current-city p {
+#current-city {
+    margin-top: 40px;
+    color: black;
     font-size: large;
     text-align: center;
-    background-color: orange;
+    background-color: white;
     /* border: 30px;
-    border-color: black;
-    border-radius: 30%; */
+    border-color: black; */
+    /* border-radius: 30%; */
 }
 
-#current-city i{
+/* #current-city i{
     text-align: center;
+} */
+
+#fiveday {
+margin-top: 50px;
+color: black;
+font-size: medium;
+text-align: center;
+background-color: white;
+/* border: 50px;
+border-color: yellow; */
+/* border-radius: 30%; */
 }
+
+/* #fiveday i {
+    text-align: center;
+} */
 
 /* 5-Day Forecast: */
 
 /* Footer:
 Background Color: Linear Gradient Yellow to Orange */
-.footer {
+/* .footer {
 color:whitesmoke;
 font-size: medium;
-    }
+    } */
