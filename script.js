@@ -27,7 +27,7 @@ var submitBtn = document.querySelector('.submit');
    
     $(function getLatLon() {
         //var randomTake = document.getElementById('input').value
-        var requestUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + newBtn.innerText + "&limit=1&appid=dcb4a51f4037e4402071e03b0811d2ca";
+        var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + newBtn.innerText + "&limit=1&appid=dcb4a51f4037e4402071e03b0811d2ca";
   
     $.ajax({
         url: requestUrl,
