@@ -5,6 +5,9 @@
 //Fetch weather api url
 //
 
+var today = dayjs().format('MMM DD, YYYY')
+$('#date').text(today);
+
 var submitBtn = document.querySelector('.submit');
 //var userInput = document.getElementById('input').value;
 
@@ -46,7 +49,7 @@ var submitBtn = document.querySelector('.submit');
         console.log(responseC);
         var cityName = responseC.name;
         var tempDeg = responseC.main.temp;
-        var iconWthr = responseC.weather.icon;
+        var iconWthr = responseC.weather[0].icon;
         var humidAmnt = responseC.main.humidity;
         var wndSpd = responseC.wind.speed;
 
@@ -59,8 +62,8 @@ var submitBtn = document.querySelector('.submit');
         var cwCity = document.querySelector('.city-name');
         cwCity.innerText = cityName;
 
-        var cwIcon = document.querySelector('.weather-icon');
-        cwIcon.innerText = iconWthr;
+        var icon = "https://openweathermap.org/img/w/" + iconWthr + ".png";
+        $('#weather-icon').attr('src', icon);
 
         var cwTemp = document.querySelector('.city-temp');
         cwTemp.innerText = "Current Temperature: " + tempDeg;
@@ -70,6 +73,7 @@ var submitBtn = document.querySelector('.submit');
 
         var cwWnd = document.querySelector('.wind-speed');
         cwWnd.innerText = "Wind Speed: " + wndSpd;
+
 
         var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=dcb4a51f4037e4402071e03b0811d2ca"
     
@@ -198,4 +202,8 @@ var submitBtn = document.querySelector('.submit');
 });
   });
 
-  
+//   var autoBtn = document.querySelectorAll('.autolctn');
+
+//   autoBtn.addEventListener('click', {})
+
+
