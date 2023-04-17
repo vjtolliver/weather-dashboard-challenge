@@ -66,13 +66,13 @@ var submitBtn = document.querySelector('.submit');
         $('#weather-icon').attr('src', icon);
 
         var cwTemp = document.querySelector('.city-temp');
-        cwTemp.innerText = "Current Temperature: " + tempDeg;
+        cwTemp.innerText = "Current Temperature: " + tempDeg + " degrees";
 
         var cwHum = document.querySelector('.humidity');
-        cwHum.innerText = "Humidity Levels: " + humidAmnt;
+        cwHum.innerText = "Humidity Levels: " + humidAmnt + " Percent";
 
         var cwWnd = document.querySelector('.wind-speed');
-        cwWnd.innerText = "Wind Speed: " + wndSpd;
+        cwWnd.innerText = "Wind Speed: " + wndSpd + " MPH";
 
 
         var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=dcb4a51f4037e4402071e03b0811d2ca"
@@ -86,27 +86,27 @@ var submitBtn = document.querySelector('.submit');
         
         //var cityNameF = responseF.city.name;
         var tempDegFD1 = responseF.list[1].main.temp;
-        var iconWthrFD1 = responseF.list[1].weather.icon;
+        var iconWthrFD1 = responseF.list[1].weather[0].icon;
         var humidAmntFD1 = responseF.list[1].main.humidity;
         var wndSpdFD1 = responseF.list[1].wind.speed;
 
         var tempDegFD2 = responseF.list[9].main.temp;
-        var iconWthrFD2 = responseF.list[9].weather.icon;
+        var iconWthrFD2 = responseF.list[9].weather[0].icon;
         var humidAmntFD2 = responseF.list[9].main.humidity;
         var wndSpdFD2 = responseF.list[9].wind.speed;
 
         var tempDegFD3 = responseF.list[17].main.temp;
-        var iconWthrFD3 = responseF.list[17].weather.icon;
+        var iconWthrFD3 = responseF.list[17].weather[0].icon;
         var humidAmntFD3 = responseF.list[17].main.humidity;
         var wndSpdFD3 = responseF.list[17].wind.speed;
 
         var tempDegFD4 = responseF.list[25].main.temp;
-        var iconWthrFD4 = responseF.list[25].weather.icon;
+        var iconWthrFD4 = responseF.list[25].weather[0].icon;
         var humidAmntFD4 = responseF.list[25].main.humidity;
         var wndSpdFD4 = responseF.list[25].wind.speed;
 
         var tempDegFD5 = responseF.list[33].main.temp;
-        var iconWthrFD5 = responseF.list[33].weather.icon;
+        var iconWthrFD5 = responseF.list[33].weather[0].icon;
         var humidAmntFD5 = responseF.list[33].main.humidity;
         var wndSpdFD5 = responseF.list[33].wind.speed;
 
@@ -116,14 +116,14 @@ var submitBtn = document.querySelector('.submit');
         console.log(humidAmntFD1);
         console.log(wndSpdFD1);
 
-        var fdfIconO = document.querySelector('.d-one-icon');
-        fdfIconO.innerText = iconWthrFD1;
+        var fdfIconO = "https://openweathermap.org/img/w/" + iconWthrFD1 + ".png";
+        $('#d-one-icon').attr('src', fdfIconO);
 
         var fdfTempO = document.querySelector('.d-one-temp');
-        fdfTempO.innerText = "Temperature: " + tempDegFD1 + " degrees";
+        fdfTempO.innerText = "Temperature: " + tempDegFD1 + " Degrees";
 
         var fdfHumO = document.querySelector('.d-one-hum');
-        fdfHumO.innerText = "Humidity Level: " + humidAmntFD1 + " percent";
+        fdfHumO.innerText = "Humidity Level: " + humidAmntFD1 + " Percent";
 
         var fdfWndO = document.querySelector('.d-one-wind');
         fdfWndO.innerText = "Wind Speed: " + wndSpdFD1 + " mph";
@@ -133,14 +133,14 @@ var submitBtn = document.querySelector('.submit');
         console.log(humidAmntFD2);
         console.log(wndSpdFD2);
 
-        var fdfIconTw = document.querySelector('.d-two-icon');
-        fdfIconTw.innerText = iconWthrFD2;
+        var fdfIconTw = "https://openweathermap.org/img/w/" + iconWthrFD2 + ".png";
+        $('#d-two-icon').attr('src', fdfIconTw);
 
         var fdfTempTw = document.querySelector('.d-two-temp');
-        fdfTempTw.innerText = "Temperature: " + tempDegFD2 + " degrees";
+        fdfTempTw.innerText = "Temperature: " + tempDegFD2 + " Degrees";
 
         var fdfHumTw = document.querySelector('.d-two-hum');
-        fdfHumTw.innerText = "Humidity Level: " + humidAmntFD2 + " percent";
+        fdfHumTw.innerText = "Humidity Level: " + humidAmntFD2 + " Percent";
 
         var fdfWndTw = document.querySelector('.d-two-wind');
         fdfWndTw.innerText = "Wind Speed: " + wndSpdFD2 + " mph";
@@ -150,14 +150,14 @@ var submitBtn = document.querySelector('.submit');
         console.log(humidAmntFD3);
         console.log(wndSpdFD3);
 
-        var fdfIconTh = document.querySelector('.d-thr-icon');
-        fdfIconTh.innerText = iconWthrFD3;
+        var fdfIconTh = "https://openweathermap.org/img/w/" + iconWthrFD3 + ".png";
+        $('#d-thr-icon').attr('src', fdfIconTh);
 
         var fdfTempTh = document.querySelector('.d-thr-temp');
-        fdfTempTh.innerText = "Temperature: " + tempDegFD3 + " degrees";
+        fdfTempTh.innerText = "Temperature: " + tempDegFD3 + " Degrees";
 
         var fdfHumTh = document.querySelector('.d-thr-hum');
-        fdfHumTh.innerText = "Humidity Level: " + humidAmntFD3 + " percent";
+        fdfHumTh.innerText = "Humidity Level: " + humidAmntFD3 + " Percent";
 
         var fdfWndTh = document.querySelector('.d-thr-wind');
         fdfWndTh.innerText = "Wind Speed: " + wndSpdFD3 + " mph";
@@ -167,14 +167,14 @@ var submitBtn = document.querySelector('.submit');
         console.log(humidAmntFD4);
         console.log(wndSpdFD4);
 
-        var fdfIconFo = document.querySelector('.d-four-icon');
-        fdfIconFo.innerText = iconWthrFD4;
+        var fdfIconFo = "https://openweathermap.org/img/w/" + iconWthrFD4 + ".png";
+        $('#d-four-icon').attr('src', fdfIconFo);
 
         var fdfTempFo = document.querySelector('.d-four-temp');
-        fdfTempFo.innerText = "Temperature: " + tempDegFD4 + " degrees";
+        fdfTempFo.innerText = "Temperature: " + tempDegFD4 + " Degrees";
 
         var fdfHumFo = document.querySelector('.d-four-hum');
-        fdfHumFo.innerText = "Humidity Level: " + humidAmntFD4 + " percent";
+        fdfHumFo.innerText = "Humidity Level: " + humidAmntFD4 + " Percent";
 
         var fdfWndFo = document.querySelector('.d-four-wind');
         fdfWndFo.innerText = "Wind Speed: " + wndSpdFD4 + " mph";
@@ -184,14 +184,14 @@ var submitBtn = document.querySelector('.submit');
         console.log(humidAmntFD5);
         console.log(wndSpdFD5);
 
-        var fdfIconFi = document.querySelector('.d-five-icon');
-        fdfIconFi.innerText = iconWthrFD5;
+        var fdfIconFi = "https://openweathermap.org/img/w/" + iconWthrFD5 + ".png";
+        $('#d-five-icon').attr('src', fdfIconFi);
 
         var fdfTempFi = document.querySelector('.d-five-temp');
-        fdfTempFi.innerText = "Temperature: " + tempDegFD5 + " degrees";
+        fdfTempFi.innerText = "Temperature: " + tempDegFD5 + " Degrees";
 
         var fdfHumFi = document.querySelector('.d-five-hum');
-        fdfHumFi.innerText = "Humidity Level: " + humidAmntFD5 + " percent";
+        fdfHumFi.innerText = "Humidity Level: " + humidAmntFD5 + " Percent";
 
         var fdfWndFi = document.querySelector('.d-five-wind');
         fdfWndFi.innerText = "Wind Speed: " + wndSpdFD5 + " mph";
