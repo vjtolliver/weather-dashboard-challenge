@@ -8,7 +8,7 @@ This project is intended to give weather updates in your area. You'll be able to
 In the Search History Box type in any city, or press one of the cities already listed to display the current weather conditions and five day forecast for that location.
 
 ##
-![weather site](images\Screenshot 2023-04-17 201204.png)
+![weather site](./images/Screenshot%202023-04-17%20201204.png)
 
 ## Technologies
 HTML
